@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+* {
+  font-family: "Instrument Serif", serif;
+}
+
+.contentWrapper {
+  padding: 0 3rem;
+}
+
+body {
+  background: #F4F2E9;
+}
+/* top title */
+.topTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date, .time {
+  font-size: 1.5rem;
+}
+
+h2.city {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+/* inside  */
+.Head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 77px;
+  height: calc(100vh - 13rem);
+}
+
+.Icon svg {
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  margin: 0 auto;
+}
+
+.weatherInfo_Current {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.weatherInfo_Type {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+  text-transform: capitalize;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.WeatherDetails, .Numbers {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0.5rem;
+}
+
+.WeatherInfoSection {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+/* footer links */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0.5rem;
+  width: 100%;
+  /* padding: 0 3rem; */
+}
+
+.navBar nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 2rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+}
+
+@media only screen and (max-width: 767px) {
+  .WeatherDetails, .Numbers {
+    font-size: 1.3rem;
+  }
+
+  .date, .time {
+    font-size: 1rem;
+  }
+
+  h2.city {
+    font-size: 2rem;
+  }
+
+  .Head {
+    padding: 0rem;
+    height: calc(100vh - 8rem);
+  }
+
+  .navBar nav {
+    font-size: 1rem;
+  }
+}
