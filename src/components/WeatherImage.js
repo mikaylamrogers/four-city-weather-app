@@ -7,7 +7,6 @@ import {
     faCloudRain,
     faSun,
     faSmog,
-    faRainbow,
     faWind,
 } from "@fortawesome/free-solid-svg-icons";
 

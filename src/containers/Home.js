@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import moment from 'moment-timezone';
 
 import WeatherImage from "../components/WeatherImage";
@@ -57,7 +57,6 @@ function Home() {
 
     const {
         cloudiness,
-        cloudinessValue,
         currentTemp,
         highTemp,
         humidity,
@@ -66,7 +65,6 @@ function Home() {
         windSpeed,
     } = useMemo(() => {
         let cloudiness = '';
-        let cloudinessValue = 0;
         let currentTemp = '';
         let highTemp = '';
         let humidity = '';
@@ -76,7 +74,6 @@ function Home() {
 
         if (weatherData) {
             cloudiness = weatherData.clouds.all + '%';
-            cloudinessValue = weatherData.clouds.all;
             currentTemp = Math.round(weatherData.main.temp) + '°';
             highTemp = Math.round(weatherData.main.temp_max) + '°';
             humidity = weatherData.main.humidity + '%';
@@ -87,7 +84,6 @@ function Home() {
 
         return {
             cloudiness,
-            cloudinessValue,
             currentTemp,
             highTemp,
             humidity,
